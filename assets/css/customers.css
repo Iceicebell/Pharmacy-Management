@@ -1,0 +1,201 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500;700&display=swap');
+
+*{
+    font-family: 'Ubuntu', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    
+}
+body{
+    background: linear-gradient(to right, var(--yellow3), var(--yellow2));
+}
+:root{
+    --yellow: #f8cf2e;
+    --white: #fff;
+    --gray: #f5f5f5;
+    --black1: #1d1a39;
+    --black2: #451952;
+    --bg:#28282B;
+    --yellow2: #ffe88a;
+    --yellow3: #d59b27;
+}
+.container{
+    position: relative;
+    width: 100%;
+}
+.main{
+    position: absolute;
+    width: calc(100%-300px);
+    left: 300px;
+    min-height: 100vh;
+    background: linear-gradient(to right, var(--yellow3), var(--yellow2));
+    transition: 0.5s;
+}
+.topbar{
+    width: 100%;
+    height: 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 10px;
+}
+.toggle{
+    position: relative;
+    width: 60px;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2.5rem;
+    cursor: pointer;
+    color: var(--bg);
+}
+.user{
+    position: relative;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    overflow: hidden;
+    cursor: pointer;
+}
+.user img{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.details{
+    position: relative;
+    width: 100%;
+    padding: 20px;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-gap: 30px;
+    margin-top: 50px
+}
+
+.details .recentOrders{
+    position: relative;
+    display: grid;
+    min-height: 500px;
+    background: var(--bg);
+    padding: 20px;
+    box-shadow: 0 7px 25px var(--bg);
+    border-radius: 20px;
+}
+td .delete{
+    color: red;
+} td .update{
+    color: green;
+}
+.order{
+    color: var(--yellow);
+}
+.details .cardHeader{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+.cardHeader h2{
+    font-weight: 600;
+    color: var(--yellow);
+}
+.details table{
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+}
+.details table thead td{
+    font-weight: 600;
+}
+.details .recentOrders table tr{
+    color: var(--yellow);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+.details .recentOrders table tr:last-child{
+    border-bottom: none;
+}
+.details .recentOrders table tbody tr:hover{
+    background: var(--yellow);
+    color: var(--bg);
+}
+.details .recentOrders table tr td{
+    padding: 10px;
+}
+.details .recentOrders table tr td:last-child{
+    text-align: end;
+}
+.details .recentOrders table tr td:nth-child(2){
+    text-align: end;
+}
+.details .recentOrders table tr td:nth-child(3){
+    text-align: center;
+}
+.select{
+    padding: 3px;
+    background-color: var(--bg);
+    color: var(--yellow);
+    border:solid 1px var(--yellow);
+}
+.sort{
+    padding: 5px;
+    background-color: var(--yellow);
+    color: var(--bg);
+    cursor: pointer;
+    border-radius: 5px;
+}
+.option{
+    background-color: var(--yellow);
+    color: var(--bg);
+}
+.newCustomers{
+    position: relative;
+    display: grid;
+    min-height: 500px;
+    padding: 20px;
+    background: var(--bg);
+    box-shadow: 0 7px 25px var(--bg);
+    border-radius: 20px;
+}
+.input-group-login{
+    top:150px;
+    position:absolute;
+    width:280px;
+    transition: .5s;
+}
+.input-field{
+    width:80%;
+    padding:10px 0;
+    margin:5px 35px;
+    border-left: 0;
+    border-top: 0;
+    border-right: 0;
+    border-bottom: 1px solid var(--yellow);
+    outline: none;
+    background: transparent;
+    color: var(--yellow);
+}
+.signup{
+    width:80px;
+    padding:10px 5px;
+    cursor:pointer;
+    display: block;
+    margin: auto;
+    background:var(--bg);
+    border: 1px solid var(--yellow);
+    outline: none;
+    border-radius: 30px;
+    margin-bottom: 50px;
+    margin-top: 50px;
+}
+.signup:hover{
+    background-color: var(--bg);
+    box-shadow:0 0 5px 2px orange;
+    transition: .2s;
+}
+.signup:active{
+    color: black;
+}

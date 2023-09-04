@@ -1,0 +1,210 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500;700&display=swap');
+
+*{
+    font-family: 'Ubuntu', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --yellow: #f8cf2e;
+    --white: #fff;
+    --gray: #f5f5f5;
+    --black1: #1d1a39;
+    --black2: #451952;
+    --bg:#28282B;
+    --yellow2: #ffe88a;
+    --yellow3: #d59b27;
+}
+body{
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+
+.container{
+    position: relative;
+    width: 100%;
+}
+
+.navigation{
+    position: fixed;
+    width: 300px;
+    height: 100%;
+    background: var(--bg);
+    border-left: 10px solid var(--bg);
+    transition: .5s;
+    overflow: hidden;
+}
+.navigation.active{
+    width: 80px;
+}
+.navigation ul{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+}
+.navigation ul li {
+    position: relative;
+    width: 100%;
+    list-style: none;
+    border-top-left-radius: 30px;
+    border-bottom-left-radius: 30px;
+    color: var(--yellow);
+}
+.navigation ul li:hover{
+    background-color: var(--yellow3);
+}
+.navigation ul li:nth-child(1){
+    margin-bottom: 40px;
+    pointer-events: none;
+}
+
+.navigation ul li a{
+    position: relative;
+    display: block;
+    width: 100%;
+    display: flex;
+    text-decoration: none;
+    color: var(--yellow);
+}
+
+.navigation ul li:hover a {
+    color: var(--bg);
+}
+
+.navigation ul li a .icon{
+    position: relative;
+    display: block;
+    min-width: 60px;
+    height: 60px;
+    line-height: 75px;
+    text-align: center;
+}
+.navigation ul li a .icon ion-icon{
+    font-size: 1.75rem;
+}
+.navigation ul li a .title{
+    position: relative;
+    display: block;
+    padding: 0 10px;
+    height: 60px;
+    line-height: 60px;
+    text-align: start;
+    white-space: nowrap;
+}
+
+.navigation ul li:hover a::before{
+    content: "";
+    position: absolute;
+    right: 0;
+    top: -50px;
+    width: 50px;
+    height: 50px;
+    background-color: transparent;
+    border-radius: 50%;
+    box-shadow: 35px 35px 0 10px var(--yellow3);
+    pointer-events: none;
+}
+
+.navigation ul li:hover a::after{
+    content: "";
+    position: absolute;
+    right: 0;
+    bottom: -50px;
+    width: 50px;
+    height: 50px;
+    background-color: transparent;
+    border-radius: 50%;
+    box-shadow: 35px -35px 0 10px var(--yellow3);
+    pointer-events: none;
+}
+.click{
+    background-color: var(--yellow3);
+    color: var(--yellow);
+}
+.click::after{
+    content: "";
+    position: absolute;
+    right: 0;
+    bottom: -50px;
+    width: 50px;
+    height: 50px;
+    background-color: transparent;
+    border-radius: 50%;
+    box-shadow: 35px -35px 0 10px var(--yellow3);
+    pointer-events: none;
+}
+.click::before{
+    content: "";
+    position: absolute;
+    right: 0;
+    top: -50px;
+    width: 50px;
+    height: 50px;
+    background-color: transparent;
+    border-radius: 50%;
+    box-shadow: 35px 35px 0 10px var(--yellow3);
+    pointer-events: none;
+}
+.click .title{
+    color: var(--yellow);
+}
+.click .icon{
+    color: var(--yellow);
+}
+.newMedicines{
+    position: relative;
+    display: grid;
+    min-height: 500px;
+    padding: 20px;
+    background: var(--bg);
+    box-shadow: 0 7px 25px var(--bg);
+    border-radius: 20px;
+}
+.input-group-login{
+    top:150px;
+    position:absolute;
+    width:280px;
+    transition: .5s;
+}
+.input-field{
+    width:80%;
+    padding:10px 0;
+    margin:5px 35px;
+    border-left: 0;
+    border-top: 0;
+    border-right: 0;
+    border-bottom: 1px solid var(--yellow);
+    outline: none;
+    background: transparent;
+    color: var(--yellow);
+}
+.add{
+    width:80px;
+    padding:10px 5px;
+    cursor:pointer;
+    display: block;
+    margin: auto;
+    background:var(--bg);
+    border: 1px solid var(--yellow);
+    outline: none;
+    border-radius: 30px;
+    margin-bottom: 10px;
+    margin-top: 50px;
+    color: var(--yellow);
+}
+.add:hover{
+    background-color: var(--bg);
+    box-shadow:0 0 5px 2px orange;
+    transition: .2s;
+}
+.add:active{
+    color: black;
+}
+.error{
+    color: red;
+    margin-left: 22%;
+    font-size: 20px;
+}
